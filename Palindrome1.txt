@@ -1,27 +1,35 @@
 import java.util.*;
 
-public class Palindrome 
-{
+public class Palindrome {
+public static void main(String[] args) {	
+	Scanner in = new Scanner(System.in);
+	System.out.println("Enter a word to check if it is a palindrome");
 	
-	public static boolean palin(String input)
-	{
-		if(input.length() <= 2)
+	String word = in.next();
+	
+	System.out.print(palin(word));
+}
+		public static boolean palin(String input)
 		{
-			System.out.print("true");
-			return true;
-		}
-		else if(input.charAt(0) == input.charAt(input.length() -1))
-		{
-			palin(input.substring(1, input.length() -2));
-			System.out.print("true");
-			return true;
-			
-		}
-		else
-		{
-			System.out.print("false");
-			return false;
+			if(input.length() <= 2)
+			{
+				System.out.print("true");
+				return true;
+			}
+			else if(input.charAt(0) == input.charAt(input.length() -1))
+			{
+				palin(input.substring(1, input.length() -2));
+				System.out.print("true");
+				return true;
+				
+			}
+			else
+			{
+				System.out.print("false");
+				return false;
+			}
 		}
 	}
-	
-}
+
+
+
